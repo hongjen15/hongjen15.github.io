@@ -4,37 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>旅行相片一覽</title>
+    <style>
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .photo-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: #f8f8f8;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 18px 24px;
+            min-width: 320px;
+            max-width: 340px;
+        }
+        .photo-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 18px;
+            clip-path: polygon(
+                25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%
+            );
+            border: 4px solid #fff;
+            box-shadow: 0 2px 8px rgba(33,147,176,0.12);
+            background: #eee;
+        }
+        .photo-info {
+            flex: 1;
+        }
+        .photo-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #2193b0;
+        }
+        .photo-desc {
+            font-size: 0.98rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .photo-date {
+            font-size: 0.92rem;
+            color: #888;
+        }
+        @media (max-width: 900px) {
+            .gallery-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
  <h1>旅行相片一覽</h1>
-  <table border="1">
-    <tr>
-        <th>分類</th>
-        <th>縮圖</th>
-        <th>標題與描述</th>
-        <th>拍攝日期</th>
-    </tr>
-    <tr>
-         <th rowspan="2">城市風景</th>
-        <td><img src="picture3.jpg" width="100"></td>
-        <td>河畔夕照<br>金色陽光灑在河面，倒映城市天際線。</td>
-        <td>2023-09-01</td>
-    </tr>
-    <tr>
-        <td><img src="picture1.jpg" width="100"></td>
-        <td>街角咖啡店透出溫暖光暈。</td>
-        <td>2023-09-02</td>
-    </tr>
-    <tr>
-       <th colspan="4">海邊旅行</th>
-    </tr>
-    <tr>
-        <td>自然風景</td>
-        <td><img src="picture2.jpg" width="100"></td>
-        <td>清晨海浪
-第一道陽光照亮浪花與沙粒。</td>
-        <td>2023-09-03</td>
-    </tr>
-   </table>
+ <div class="gallery-row">
+    <div class="photo-card">
+        <img src="picture3.jpg" class="photo-img" alt="河畔夕照">
+        <div class="photo-info">
+            <div class="photo-title">河畔夕照</div>
+            <div class="photo-desc">金色陽光灑在河面，倒映城市天際線。</div>
+            <div class="photo-date">2023-09-01</div>
+        </div>
+    </div>
+    <div class="photo-card">
+        <img src="picture1.jpg" class="photo-img" alt="街角咖啡店">
+        <div class="photo-info">
+            <div class="photo-title">街角咖啡店</div>
+            <div class="photo-desc">街角咖啡店透出溫暖光暈。</div>
+            <div class="photo-date">2023-09-02</div>
+        </div>
+    </div>
+    <div class="photo-card">
+        <img src="picture2.jpg" class="photo-img" alt="清晨海浪">
+        <div class="photo-info">
+            <div class="photo-title">清晨海浪</div>
+            <div class="photo-desc">第一道陽光照亮浪花與沙粒。</div>
+            <div class="photo-date">2023-09-03</div>
+        </div>
+    </div>
+ </div>
 </body>
 </html>
