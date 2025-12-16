@@ -48,6 +48,21 @@
       background:var(--primary);
       border-color:var(--primary);
     }
+    .img-crop-left-1-5 {
+      object-fit: cover;
+      object-position: 70% 0; /* 靠右偏移，顯示右半部較多 */
+      width: 100%;
+      height: 180px;
+      clip-path: none;
+    }
+    .img-anime-cover {
+      object-fit: cover;
+      object-position: center 30%; /* 顯示圖片中間偏上 */
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      display: block;
+    }
     @media(min-width:768px){
       .hero{ padding:8rem 0 6rem 0; }
       .card-thumb img{ height:220px; }
@@ -124,7 +139,21 @@
           <p class="text-muted mb-0">以下為課堂與個人練習作品示意</p>
         </div>
         <div class="row g-4">
-          <!-- card 1 -->
+          <!-- 新增 card 0 -->
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="card card-thumb shadow-sm">
+              <a href="https://sites.google.com/stu.ntue.edu.tw/jill?usp=sharing" target="_blank" style="text-decoration:none;">
+                <img src="螢幕擷取畫面 2025-12-16 091250.png" alt="作品0" class="img-crop-left-1-5">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="https://sites.google.com/stu.ntue.edu.tw/jill?usp=sharing" target="_blank" style="color:inherit; text-decoration:none;">Google site</a>
+                </h5>
+                <p class="card-text text-muted">0923</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 1 (原本的 card 1) -->
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card card-thumb shadow-sm">
               <a href="https://hongjen15.github.io/0930/" target="_blank" style="text-decoration:none;">
@@ -132,39 +161,47 @@
               </a>
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="https://hongjen15.github.io/0930/" target="_blank" style="color:inherit; text-decoration:none;">作品一</a>
+                  <a href="https://hongjen15.github.io/0930/" target="_blank" style="color:inherit; text-decoration:none;">唐詩三百首</a>
                 </h5>
-                <p class="card-text text-muted">簡短說明或作品重點。</p>
+                <p class="card-text text-muted">0930</p>
               </div>
             </div>
           </div>
           <!-- card 2 -->
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card card-thumb shadow-sm">
-              <img src="下載 (1).jpg" alt="作品2">
+              <img src="螢幕擷取畫面 2025-12-16 085832.png" alt="作品2">
               <div class="card-body">
-                <h5 class="card-title">作品二</h5>
-                <p class="card-text text-muted">簡短說明或作品重點。</p>
+                <h5 class="card-title">旅行相片一覽</h5>
+                <p class="card-text text-muted">1007</p>
               </div>
             </div>
           </div>
           <!-- card 3 -->
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card card-thumb shadow-sm">
-              <img src="images.jpg" alt="作品3">
+              <a href="https://hongjen15.github.io/1014/" target="_blank" style="text-decoration:none;">
+                <img src="螢幕擷取畫面 2025-12-16 093125.png" alt="作品3">
+              </a>
               <div class="card-body">
-                <h5 class="card-title">作品三</h5>
-                <p class="card-text text-muted">簡短說明或作品重點。</p>
+                <h5 class="card-title">
+                  <a href="https://hongjen15.github.io/1014/" target="_blank" style="color:inherit; text-decoration:none;">個人名片</a>
+                </h5>
+                <p class="card-text text-muted">1014</p>
               </div>
             </div>
           </div>
           <!-- card 4 -->
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card card-thumb shadow-sm">
-              <img src="images (1).jpg" alt="作品4">
+              <a href="https://hongjen15.github.io/1021/" target="_blank" style="text-decoration:none;">
+                <img src="000001_1642555814.webp" alt="作品4" class="img-anime-cover">
+              </a>
               <div class="card-body">
-                <h5 class="card-title">作品四</h5>
-                <p class="card-text text-muted">簡短說明或作品重點。</p>
+                <h5 class="card-title">
+                  <a href="https://hongjen15.github.io/1021/" target="_blank" style="color:inherit; text-decoration:none;">喜歡的動漫</a>
+                </h5>
+                <p class="card-text text-muted">1021</p>
               </div>
             </div>
           </div>
